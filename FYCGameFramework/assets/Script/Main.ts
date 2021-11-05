@@ -6,6 +6,17 @@ const { ccclass, property } = _decorator;
 @ccclass('Main')
 export class Main extends FYMain {
     start() {
-
+        pinus.init({
+            host: window.location.hostname,
+            port: 3014,
+            log: true
+        }, function() {
+            console.log("----------")
+            pinus.request('gate.gateHandler.queryEntry', {
+                uid: 'Danic'
+            }, function(data) {
+                console.log(data)
+            });
+        });
     }
 }
