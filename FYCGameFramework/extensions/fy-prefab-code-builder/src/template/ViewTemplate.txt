@@ -1,0 +1,52 @@
+// This script is automatic generation, please do not edit.
+// If you need add logic, please write in $CLASS_NAME.ts .
+// If you need add data, please write in $CLASS_NAMEModel.ts .
+
+import $IMPORT from 'cc';
+import { FYUIViewBase } from '../../../Base/FYFramework/UI/FYUIViewBase';
+const { ccclass, property } = _decorator;
+
+
+@ccclass('$CLASS_NAME')
+export class $CLASS_NAME extends FYUIViewBase {
+    /** 预制名 给类调用 */
+    public static prefabName = '$PREFAB_NAME';
+    /** 预制名 给实例调用 */
+    public prefabName = '$PREFAB_NAME';
+
+    $VARIABLE_DECLARATIONS
+
+    public onLoad() {
+        this.initComponent();
+    }
+
+    public onEnable() {
+        if (super.onEnable) {
+            super.onEnable();
+        }
+
+        this.addEvent();
+    }
+
+    public onDisable() {
+        if (super.onDisable) {
+            super.onDisable();
+        }
+
+        this.removeEvent();
+    } 
+
+    private initComponent() {
+        $VARIABLE_ASSIGNMENT
+    }
+
+    private addEvent() {
+$EVENT_ON
+    }
+
+    private removeEvent() {
+$EVENT_OFF
+    }
+
+$EVENT_CALLBACK
+}

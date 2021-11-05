@@ -1,0 +1,18 @@
+import { _decorator } from 'cc';
+import { FYEntityControllerBase } from '../../../Base/FYFramework/Entity/FYEntityControllerBase';
+import { $CLASS_NAMEModel } from './$CLASS_NAMEModel';
+import { $CLASS_NAMEView } from './$CLASS_NAMEView';
+const { ccclass, property } = _decorator;
+
+
+@ccclass('$CLASS_NAME')
+export class $CLASS_NAME extends FYEntityControllerBase {
+    /** 预制名 给类调用 */
+    public static prefabName = '$PREFAB_NAME';
+    /** 预制名 给实例调用 */
+    public prefabName = '$PREFAB_NAME';
+
+    public model: $CLASS_NAMEModel = undefined;
+    public view: $CLASS_NAMEView = undefined;
+
+}

@@ -1,0 +1,45 @@
+{
+    "package_version": 2,
+    "version": "1.0.0",
+    "name": "fy-resources-path-builder",
+    "description": "将resources下的资源，根据资源名，生成资源名到资源路径的映射表，便于直接通过资源名就能获取资源。需要用户保证资源名的全局唯一性",
+    "main": "./dist/main.js",
+    "dependencies": {
+        "vue": "^3.1.4",
+        "fs-extra": "^10.0.0"
+    },
+    "devDependencies": {
+        "@types/node": "^16.0.1",
+        "@types/fs-extra": "^9.0.5",
+        "typescript": "^4.3.4"
+    },
+    "contributions": {
+        "menu": [
+            {
+                "path": "i18n:menu.extension/ForyunTools",
+                "label": "构建资源路径",
+                "message": "res-build"
+            }
+        ],
+        "messages": {
+            "res-build": {
+                "methods": [
+                    "resBuild"
+                ]
+            }
+        },
+        "shortcuts": [
+            {
+                "message": "res-build",
+                "win": "ctrl+r",
+                "mac": "cmd+r"
+            }
+        ]
+    },
+    "author": "Foryun",
+    "editor": ">=3.3.0",
+    "scripts": {
+        "build": "tsc -b",
+        "watch": "tsc -w"
+    }
+}
